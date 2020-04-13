@@ -152,8 +152,6 @@ async def on_member_join(member):
         users[str(member.id)]['exp'] = 0
         users[str(member.id)]['lvl'] = 0
 
-    role = discord.utils.get(member.server.roles, name = '')
-
     with open('users.json', 'w') as f:
         json.dump(users, f)
 
